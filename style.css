@@ -1,0 +1,354 @@
+/* For logo */
+/* for nav and other body */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* for text  and heading */
+@import url('https://fonts.googleapis.com/css2?family=Maname&display=swap');
+
+/* for the paragraph */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Zain:wght@200;300;400;700;800;900&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  opacity: 0.9;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap:40%;
+}
+.header .logo{
+  width: 150px; /* Set a fixed width */
+  height: 100px; /* Set a fixed height */
+  object-fit: contain; 
+}
+.nav-bar {
+  display: flex;
+  column-gap: 30px;
+  justify-content: space-between;
+
+}
+.nav-bar a {
+  color: black;
+  font-family: "Outfit", sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 3%;
+  border-radius: 8%;
+}
+.nav-bar a:not(:nth-last-child(1)):hover {
+  color: black;
+  background-color: rgb(163, 163, 163);
+}
+.nav-bar a:last-child:hover{
+  opacity: 0.9;
+}
+
+.nav-bar a:last-child {
+  color: white;
+  font-family: "Outfit", sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 3%;
+  border-radius: 5%;
+  background-color: red;
+  text-align: center;
+  align-items: center;
+
+}
+
+.about h2,.service h2{
+  font-family: "Maname", serif;
+  font-weight: 700;
+  color: black;
+  font-size: 42px;
+  display: block;
+  margin: 30px auto 40px;
+  text-align: center;
+  align-items: center;
+}
+.g-4, .gx-4 {
+  --bs-gutter-x: -2rem;
+}
+.col{
+  padding: 5%;
+}
+.card-body h5{
+  font-family: "Outfit", sans-serif;
+
+
+}
+.card-title:hover{
+  background-color: rgb(196, 53, 53);
+  color: white;
+  cursor: pointer;
+}
+.card-body .hover:hover{
+  color: rgb(196, 53, 53);
+  cursor: pointer;
+}
+.card img{
+  width: 50%;
+  height: 50%;
+}
+.card-image-top{
+  width: 30%;
+  height: 20%;
+
+}
+
+
+
+
+/* for the service page */
+.containn{
+  display: flex;
+  flex-direction: row;
+}
+.container-img{
+position: relative;
+width: 30%;
+margin: 0 auto;
+display: block;
+align-items: center;
+
+}
+
+.image {
+display: block;
+width: 100%;
+height: auto;
+}
+
+.overlay {
+position: absolute;
+bottom: 100%;
+left: 0;
+right: 0;
+background-color: rgb(196, 53, 53);
+overflow: hidden;
+width: 100%;
+height:0;
+transition: .5s ease;
+}
+
+
+.container-img:hover .overlay {
+bottom: 0;
+height: 100%;
+}
+
+.text {
+  text-decoration: 5px solid black underline;
+color: white;
+font-size: 20px;
+position: absolute;
+top: 20%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+text-align: center;
+}
+.overlay ul{
+  color: white;
+  font-family: "Outfit", sans-serif;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+
+}
+.overlay ul li{
+  margin: 20px;
+}
+
+
+/* responsive */
+@media screen and (max-width: 557px) {
+  .header {
+    display: block;
+    align-items: center;
+    text-align: center;
+  }
+  .header .logo {
+    font-family: "Outfit", sans-serif;
+    color: rgb(91, 239, 150);
+  }
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    column-gap: 30px;
+  }
+  .nav-bar a {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 377px) {
+  .bookmark {
+    display: flex;
+    flex-direction: column;
+    column-gap: 50px;
+  }
+}
+
+
+/* we do page controls */
+
+.what-we-do{
+  display: block;
+  align-items: center;
+  text-align: center;
+  padding: 7%;
+}
+.what-we-do h2{
+  display: block;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-family: "Outfit", sans-serif;
+
+}
+.what-we-do p{
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 22px;
+}
+.flex-wedo-box{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.wedo-box{
+  flex: 0 0 400px;
+  width: 400px;
+  padding: 10px;
+  text-align: center;
+  text-overflow: ellipsis;
+  margin-bottom: 20px;
+
+}
+.wedo-box:hover{
+  background-color: rgb(220, 219, 219);
+}
+.wedo-box h2{
+  font-family: "Outfit", sans-serif;
+  font-size: 19px;
+
+}
+.wedo-box p{
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.semi-logo{
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.semi-logo h1{
+  margin-bottom: 20px;
+}
+
+/* few words about us controls */
+.about-us{
+  background-color: linear-gradient(180deg (rgb(246, 242, 242),white));
+  background-color: rgb(246, 242, 242);
+
+}
+.container-about-us{
+  display: flex;
+  flex-direction: row;
+  padding: 5%;
+  gap: 200px;
+}
+.about-text{
+  display: flex;
+  flex-direction: column;
+
+}
+.about-text h2 {
+  margin-bottom: 30px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 35px;
+  text-overflow: ellipsis;
+  display: block;
+
+
+}
+.about-text p{
+  line-height: 1.7;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.about-text a{
+  background-color: red;
+  width: 100px;
+  padding: 2%;
+  color: white;
+  border-radius: 4%;
+  text-decoration: none;
+}
+.about-text a:hover{
+  opacity: 0.8;
+}
+.container-about-us img{
+  border-radius: 5%;
+}
+/* little display */
+.little-display{
+  margin-top: 20px;
+  width: 100%;
+  height: 20%;
+  background-color: #591d3e;
+  text-align: center;
+  align-items: center;
+  padding: 5%;
+}
+.little-display-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.little-display-text h2{
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 35px;
+  text-overflow: ellipsis;
+  display: block;
+  color: white;
+}
+.little-display-text a{
+  margin-left: 15px;
+  text-decoration: none;
+  background-color: red;
+  padding: 1%;
+  color: white;
+  letter-spacing: 2px;
+}
+.little-display-text a:hover{
+  opacity: 0.8;
+}
+
