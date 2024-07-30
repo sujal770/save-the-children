@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMVwF2Yj7XfyHWoBhlnj2G7Nfpcf57yFJFcJHjf" crossorigin="anonymous">
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -13,7 +15,7 @@
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home-Sujal</title>
+  <title>Home-Reliance</title>
   <link href="style.css" rel="stylesheet" />
 </head>
 
@@ -21,20 +23,28 @@
   <div class="container">
     <header class="header">
       <img src="logo save.png" alt="logo" class="logo">
-      <nav class="nav-bar">
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#service">Service</a>
-        <a href="#contact">Contact</a>
-        <a href="donation.html">Donation</a>
+      <nav class="nav-bar" id="myNavBar" aria-label="Main navigation">
+        <a href="#" aria-label="Home">Home</a>
+        <a href="#about" aria-label="About Us">About</a>
+        <a href="#service" aria-label="Services">Service</a>
+        <a href="#contact" aria-label="Contact Us">Contact</a>
+        <a href="donation.html" aria-label="Make a Donation">Donation</a>
+        
       </nav>
+      <button class="icon" onclick="toggleNav()">
+        <i class="fa fa-bars"></i>
+      </button>
+      
     </header>
+
+    
+
   </div>
   <!--carousel-->
   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="2000">
-        <img src="instant.png" class="d-block w-100" alt="...">
+        <img src="Giving CHildren.png" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item" data-bs-interval="3000">
         <img src="Hiring!.png" class="d-block w-100" alt="...">
@@ -157,7 +167,7 @@
   <div class="little-display">
     <div class="little-display-text">
       <h2> Donate To The Reliance Children's Program</h2>
-      <a href="#">Donate now</a>
+      <a href="donation.html">Donate now</a>
     </div>
     </div>
     
@@ -185,7 +195,7 @@
         <div class="card">
           <img src="https://png.pngtree.com/png-clipart/20231019/original/pngtree-user-profile-avatar-png-image_13369988.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Harsh Jatt</h5>
+            <h5 class="card-title">Harsh Jast</h5>
             <p class="card-text">200587420</p>
             <p class="card-text hover">Student at Georgian ILac
             <p>
@@ -292,12 +302,16 @@
       <ul>
         <li><i class="fa fa-location-arrow" aria-hidden="true"></i>
 
-          120 Bloor Young St,Toronto,Ontario</li>
+          120 Bloor Younge St,Toronto,Ontario</li>
         <li> <i class="fa fa-phone" aria-hidden="true"></i>
           Phone: 437-XXX-XXXX</li>
         <li><i class="fa fa-envelope" aria-hidden="true"></i>
           Email: <a href="mailto:info@reliance.org">info@reliance.org</a></li>
       </ul>
+      <div class="footer-logo">
+      <img src="logo save.png" alt="logo website">
+      <h2>Reliance Charity</h2>
+      </div>
     </div>
 
   </div>
@@ -313,9 +327,31 @@
 
 
 </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+function toggleNav() {
+  var nav = document.getElementById("myNavBar");
+  var icon = document.getElementById("menuIcon");
+
+  // Toggle the 'responsive' class on the nav-bar
+  if (nav.className === "nav-bar") {
+    nav.className += " responsive";
+  } else {
+    nav.className = "nav-bar";
+  }
+
+  // Toggle the 'open' class on the icon
+  if (icon.className === "icon") {
+    icon.className += " open";
+  } else {
+    icon.className = "icon";
+  }
+}
+</script>
+
+    
+
+
 
 
 </html>
